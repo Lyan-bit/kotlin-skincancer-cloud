@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".SearchSkinCancerFragment" >
+    
+
+    <TableRow>
+	     <TextView
+	         android:id="@+id/searchSkinCancerLabel"
+             android:textStyle="bold"
+             android:background="#EEFFBB"
+	         android:text="Dates:" />
+	        
+	    <EditText
+	         android:id="@+id/searchSkinCancerField"
+			android:hint="DD-MM-YYYY"
+	         android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+        <TextView
+            android:id="@+id/searchSkinCancerSpinnerLabel"
+            android:textStyle="bold"
+            android:background="#EEFFBB"
+            android:text="searchSkinCancer:" />
+        <Spinner
+            android:id="@+id/searchSkinCancerSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4" />
+        </TableRow>
+    <TableRow>
+      <TextView
+		   android:id="@+id/searchSkinCanceridLabel"
+		   android:textStyle="bold"
+		   android:background="#EEFFBB"
+		   android:text="Id:" />
+		
+	  <TextView
+		   android:id="@+id/searchSkinCanceridView"
+		   android:textStyle="bold"
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+      <TextView
+		   android:id="@+id/searchSkinCancerdatesLabel"
+		   android:textStyle="bold"
+		   android:background="#EEFFBB"
+		   android:text="Dates:" />
+		
+	  <TextView
+		   android:id="@+id/searchSkinCancerdatesView"
+		   android:textStyle="bold"
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+					  <TextView
+					       android:id="@+id/searchSkinCancerimagesLabel"
+					       android:textStyle="bold"
+					       android:background="#EEFFBB"
+					       android:text="Image:" />
+					  <ImageView
+					        android:id="@+id/searchSkinCancerimagesImageView"
+					        tools:srcCompat="@tools:sample/avatars"
+					        android:layout_width="fill_parent"
+					        android:layout_height="300dp"
+						    android:layout_span="4" />
+				     </TableRow>
+				     
+    <TableRow>
+      <TextView
+		   android:id="@+id/searchSkinCanceroutcomeLabel"
+		   android:textStyle="bold"
+		   android:background="#EEFFBB"
+		   android:text="Outcome:" />
+		
+	  <TextView
+		   android:id="@+id/searchSkinCanceroutcomeView"
+		   android:textStyle="bold"
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+        <Button
+            android:id="@+id/searchSkinCancerOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:background="#AAAAFF"
+            android:text="OK"
+            android:onClick="searchSkinCancerOK"
+            />
+        <Button
+            android:id="@+id/searchSkinCancerCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:background="#FFAAAA"
+            android:text="Cancel"
+            android:onClick="searchSkinCancerCancel"
+            />
+    </TableRow>
+</TableLayout>
+</ScrollView>

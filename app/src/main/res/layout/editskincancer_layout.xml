@@ -1,0 +1,120 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".EditSkinCancerFragment" >
+
+    <TableRow>
+        <TextView
+            android:id="@+id/crudSkinCancerLabel"
+            android:textStyle="bold"
+            android:background="#EEFFBB"
+            android:text="SkinCancer:" />
+        <Spinner
+            android:id="@+id/crudSkinCancerSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4" />
+        </TableRow>
+    <TableRow>
+      <TextView
+		   android:id="@+id/crudSkinCanceridLabel"
+		   android:textStyle="bold"
+		   android:background="#EEFFBB"
+		   android:text="Id:" />
+		
+	  <EditText
+		   android:id="@+id/crudSkinCanceridField"
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+      <TextView
+		   android:id="@+id/crudSkinCancerdatesLabel"
+		   android:textStyle="bold"
+		   android:background="#EEFFBB"
+		   android:text="Dates:" />
+		
+	  <EditText
+		   android:id="@+id/crudSkinCancerdatesField"
+		android:hint="DD-MM-YYYY"
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+			  <TextView
+			       android:id="@+id/crudSkinCancerimagesLabel"
+			       android:textStyle="bold"
+			       android:background="#EEFFBB"
+			       android:text="Image:" />
+			  <ImageView
+			        android:id="@+id/crudSkinCancerimagesImageView"
+			        tools:srcCompat="@tools:sample/avatars"
+			        android:layout_width="fill_parent"
+			        android:layout_height="300dp"
+				    android:layout_span="4" />
+		     </TableRow>
+		     
+		        <TableRow>
+		            <Button
+		                android:id="@+id/buttonPickPhoto"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#AAAAFF"
+		                android:layout_column="1"
+		                android:text="Pick Photo" 
+		                android:onClick="onPickImage"/>
+		            <Button
+		                android:id="@+id/buttonTakePhoto"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#AAAAFF"
+		                android:layout_column="3"
+		                android:text="Take Photo"
+		                android:onClick="onTakeImage" />
+		        </TableRow>
+    <TableRow>
+		<TextView
+			  android:id="@+id/crudSkinCanceroutcomeLabel"
+								android:textStyle="bold"
+			  android:background="#EEFFBB"
+			  android:text="Outcome:" />
+								
+		<TextView
+			 android:id="@+id/crudSkinCanceroutcomeView"
+			 android:textStyle="bold"
+			 android:layout_span="4" />
+		</TableRow>	
+    <TableRow>
+		<Button
+            android:id="@+id/crudSkinCancerSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:background="#AAAAFF"
+            android:text="Search"
+            android:onClick="crudSkinCancerSearch"
+            />		    
+        <Button
+            android:id="@+id/crudSkinCancerOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:background="#AAAAFF"
+            android:text="OK"
+            android:onClick="crudSkinCancerOK"
+            />
+        <Button
+            android:id="@+id/crudSkinCancerCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:background="#FFAAAA"
+            android:text="Cancel"
+            android:onClick="crudSkinCancerCancel"
+            />
+    </TableRow>
+</TableLayout>
+</ScrollView>

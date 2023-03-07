@@ -1,0 +1,53 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".DeleteSkinCancerFragment" >
+
+    <TableRow>
+        <TextView
+            android:id="@+id/crudSkinCanceridLabel"
+            android:textStyle="bold"
+            android:background="#EEFFBB"
+            android:text="id:" />
+        
+        <EditText
+            android:id="@+id/crudSkinCanceridField"
+            android:layout_span="4" />
+    </TableRow>
+
+
+    <TableRow>
+        <TextView
+            android:id="@+id/crudSkinCancerLabel"
+            android:textStyle="bold"
+            android:background="#EEFFBB"
+            android:text="SkinCancer:" />
+        <Spinner
+            android:id="@+id/crudSkinCancerSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/crudSkinCancerOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:background="#AAAAFF"
+            android:text="OK"
+            android:onClick="crudSkinCancerOK"
+            />
+        <Button
+            android:id="@+id/crudSkinCancerCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:background="#FFAAAA"
+            android:text="Cancel"
+            android:onClick="crudSkinCancerCancel"
+            />
+    </TableRow>
+</TableLayout>

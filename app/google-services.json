@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "737095199563",
+    "firebase_url": "https://patient-161e1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "patient-161e1",
+    "storage_bucket": "patient-161e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737095199563:android:1a971dbbace4d7aeddd6ce",
+        "android_client_info": {
+          "package_name": "com.example.patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737095199563-f5gmam3l0jt7c39jinc3q6rlh051830c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASzuV1vic3wwJ5wkBAVn_9RfTfhEUiYAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737095199563-f5gmam3l0jt7c39jinc3q6rlh051830c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "737095199563-1upitgh0qppqpniu4ticbve42fl3466m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lyanalwakeel.skincancer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737095199563:android:50ba0a1c8e3a7453ddd6ce",
+        "android_client_info": {
+          "package_name": "com.example.skincancer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737095199563-f5gmam3l0jt7c39jinc3q6rlh051830c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASzuV1vic3wwJ5wkBAVn_9RfTfhEUiYAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737095199563-f5gmam3l0jt7c39jinc3q6rlh051830c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "737095199563-1upitgh0qppqpniu4ticbve42fl3466m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lyanalwakeel.skincancer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
