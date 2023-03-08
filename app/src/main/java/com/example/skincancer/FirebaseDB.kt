@@ -38,6 +38,7 @@ class FirebaseDB() {
                     locals.addAll(SkinCancer.SkinCancerAllInstances)
                     for (x in locals) {
                         if (keys.contains(x.id)) {
+                            //check
                         } else {
                             SkinCancer.killSkinCancer(x.id)
                         }
