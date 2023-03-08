@@ -111,7 +111,7 @@ class SkinCancerDAO {
                         }
                     }
                 } catch (e: Exception) {
-                    //e
+                    e.printStackTrace()
                 }
             }
             return res
@@ -163,8 +163,8 @@ class SkinCancerDAO {
                 } else {
                     try {
                         result.put(jx)
-                    } catch (ee: Exception) {
-                        //ee
+                    } catch (e: Exception) {
+                        e.printStackTrace()
                     }
                 }
             }
