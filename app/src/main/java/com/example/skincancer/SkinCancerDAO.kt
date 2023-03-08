@@ -83,6 +83,7 @@ class SkinCancerDAO {
           for (item in rows.indices) {
               val row = rows[item]
               if (row == null || row.trim { it <= ' ' }.length == 0) {
+                  //e
               } else {
                   val x: SkinCancer? = parseCSV(row)
                   if (x != null) {
@@ -110,6 +111,7 @@ class SkinCancerDAO {
                         }
                     }
                 } catch (e: Exception) {
+                    //e
                 }
             }
             return res
@@ -157,10 +159,12 @@ class SkinCancerDAO {
                 val ex: SkinCancer = es[i]
                 val jx = writeJSON(ex)
                 if (jx == null) {
+                    //null
                 } else {
                     try {
                         result.put(jx)
                     } catch (ee: Exception) {
+                        //ee
                     }
                 }
             }
