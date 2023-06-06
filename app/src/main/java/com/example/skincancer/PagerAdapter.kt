@@ -11,21 +11,24 @@ class PagerAdapter(private val mContext: Context, fm: FragmentManager) : Fragmen
         private val TABTITLES = arrayOf("+SkinCancer", "ListSkinCancer", "EditSkinCancer", "DeleteSkinCancer", "SearchSkinCancerdates", "ImageRecognition")
     }
 
-    override fun getItem(position: Int): Fragment {
+     override fun getItem(position: Int): Fragment {
         // instantiate a fragment for the page.
-        if (position == 0) {
-            return CreateSkinCancerFragment.newInstance(mContext)    } 
-        else if (position == 1) {
-            return ListSkinCancerFragment.newInstance(mContext)    } 
-        else if (position == 2) {
-            return EditSkinCancerFragment.newInstance(mContext)    } 
-        else if (position == 3) {
-            return DeleteSkinCancerFragment.newInstance(mContext)    } 
-        else if (position == 4) {
-            return SearchSkinCancerdatesFragment.newInstance(mContext)    } 
-        else if (position == 5) {
-            return ImageRecognitionFragment.newInstance(mContext)    } 
-        return CreateSkinCancerFragment.newInstance(mContext) 
+            return when (position) {
+                0 -> { 
+                    CreateSkinCancerFragment.newInstance(mContext) 
+                }            1 -> { 
+                    ListSkinCancerFragment.newInstance(mContext) 
+                }            2 -> { 
+                    EditSkinCancerFragment.newInstance(mContext) 
+                }            3 -> { 
+                    DeleteSkinCancerFragment.newInstance(mContext) 
+                }            4 -> { 
+                    SearchSkinCancerdatesFragment.newInstance(mContext) 
+                }            5 -> { 
+                    ImageRecognitionFragment.newInstance(mContext) 
+                }
+                else -> CreateSkinCancerFragment.newInstance(mContext) 
+             }
     }
 
     override fun getPageTitle(position: Int): CharSequence {
