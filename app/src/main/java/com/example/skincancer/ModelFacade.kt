@@ -29,13 +29,7 @@ class ModelFacade private constructor(context: Context) {
             return instance ?: ModelFacade(context)
         }
     }
-    
-	/* This metatype code requires OclType.java, OclAttribute.java, OclOperation.java */
-	fun initialiseOclTypes() {
-			val skinCancerOclType: OclType = OclType.createByPKOclType("SkinCancer")
-		skinCancerOclType.setMetatype(SkinCancer::class.java)
-		    }
-    
+
     fun createSkinCancer(x: SkinCancerVO) { 
 			  editSkinCancer(x)
 	}
