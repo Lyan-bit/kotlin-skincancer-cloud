@@ -4,10 +4,10 @@ import java.util.ArrayList
 
 class SkinCancerVO  {
 
-    private var id: String = ""
-    private var dates: String = ""
-    private var images: String = ""
-    private var outcome: String = ""
+     var id: String = ""
+     var dates: String = ""
+     var images: String = ""
+     var outcome: String = ""
 
     constructor() {
     	//constructor
@@ -41,39 +41,6 @@ class SkinCancerVO  {
             res.add(list[i].toString())
         }
         return res
-    }
-    
-    fun getId(): String {
-        return id
-    }
-    
-    fun getDates(): String {
-        return dates
-    }
-    
-    fun getImages(): String {
-        return images
-    }
-    
-    fun getOutcome(): String {
-        return outcome
-    }
-    
-
-    fun setId(x: String) {
-    	id = x
-    }
-    
-    fun setDates(x: String) {
-    	dates = x
-    }
-    
-    fun setImages(x: String) {
-    	images = x
-    }
-    
-    fun setOutcome(x: String) {
-    	outcome = x
     }
     
 }
