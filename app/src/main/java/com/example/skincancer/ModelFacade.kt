@@ -35,15 +35,15 @@ class ModelFacade private constructor(context: Context) {
 	}
 				    
     fun editSkinCancer(x: SkinCancerVO) {
-		var obj = getSkinCancerByPK(x.getId())
+		var obj = getSkinCancerByPK(x.id)
 		if (obj == null) {
-			obj = SkinCancer.createByPKSkinCancer(x.getId())
+			obj = SkinCancer.createByPKSkinCancer(x.id)
 		}
 			
-		  obj.id = x.getId()
-		  obj.dates = x.getDates()
-		  obj.images = x.getImages()
-		  obj.outcome = x.getOutcome()
+		  obj.id = x.id
+		  obj.dates = x.dates
+		  obj.images = x.images
+		  obj.outcome = x.outcome
 		cdb.persistSkinCancer(obj)
 		currentSkinCancer = x
 	}
@@ -63,13 +63,13 @@ class ModelFacade private constructor(context: Context) {
     fun searchSkinCancer(dates: String) : ArrayList<SkinCancer> {
 			var itemsList = ArrayList<SkinCancer>()
 			for (x in currentSkinCancers.indices) {
-				if ( currentSkinCancers[x].getDates() == dates) {
+				if ( currentSkinCancers[x].dates == dates) {
 					val vo: SkinCancerVO = currentSkinCancers[x]
-				    val itemx = SkinCancer.createByPKSkinCancer(vo.getId())
-	            itemx.id = vo.getId()
-            itemx.dates = vo.getDates()
-            itemx.images = vo.getImages()
-            itemx.outcome = vo.getOutcome()
+				    val itemx = SkinCancer.createByPKSkinCancer(vo.id)
+	            itemx.id = vo.id
+            itemx.dates = vo.dates
+            itemx.images = vo.images
+            itemx.outcome = vo.outcome
 					itemsList.add(itemx)
 				}
 			}
@@ -80,7 +80,7 @@ class ModelFacade private constructor(context: Context) {
 	fun searchSkinCancer(): ArrayList<String> {
 		val res: ArrayList<String> = ArrayList()
 		for (x in currentSkinCancers.indices) {
-			res.add(currentSkinCancers[x].getDates().toString())
+			res.add(currentSkinCancers[x].dates.toString())
 		}
 		return res
 	}
@@ -131,7 +131,7 @@ class ModelFacade private constructor(context: Context) {
     fun allSkinCancerIds(): ArrayList<String> {
         val res: ArrayList<String> = ArrayList()
             for (x in currentSkinCancers.indices) {
-                res.add(currentSkinCancers[x].getId())
+                res.add(currentSkinCancers[x].id)
             }
         return res
     }
