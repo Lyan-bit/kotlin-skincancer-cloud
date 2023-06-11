@@ -25,11 +25,11 @@ class SkinCancerRecyclerViewAdapter (items: List<SkinCancerVO>, listener: ListSk
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: SkinCancerViewHolder, position: Int) {
         holder.mItem = mValues[position]
-        holder.searchSkinCancerIdView.text = " " + mValues[position].getId() + " "
-        holder.searchSkinCancerDatesView.text = " " + mValues[position].getDates() + " "
+        holder.searchSkinCancerIdView.text = " " + mValues[position].id + " "
+        holder.searchSkinCancerDatesView.text = " " + mValues[position].dates + " "
         val dimage: Bitmap? = try {
             // convert base64 to bitmap android
-            val decodedString: ByteArray = Base64.decode(mValues[position].getImages(), Base64.DEFAULT)
+            val decodedString: ByteArray = Base64.decode(mValues[position].images, Base64.DEFAULT)
             val decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
             decodedByte
         }
@@ -38,7 +38,7 @@ class SkinCancerRecyclerViewAdapter (items: List<SkinCancerVO>, listener: ListSk
             null
         }
         holder.searchSkinCancerImagesView.setImageBitmap(dimage)
-        holder.searchSkinCancerOutcomeView.text = " " + mValues[position].getOutcome() + " "
+        holder.searchSkinCancerOutcomeView.text = " " + mValues[position].outcome + " "
 
         holder.mView.setOnClickListener { mListener.onListSkinCancerFragmentInteraction(holder.mItem) }
     }
