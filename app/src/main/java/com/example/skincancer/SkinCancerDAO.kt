@@ -42,7 +42,7 @@ class SkinCancerDAO {
           if (line == null) {
               return null
           }
-          val line1vals: ArrayList<String> = Ocl.tokeniseCSV(line)
+          val line1vals: List<String> = Ocl.tokeniseCSV(line)
           var skinCancerx: SkinCancer? = SkinCancer.SkinCancerIndex[line1vals[0]]
           if (skinCancerx == null) {
               skinCancerx = SkinCancer.createByPKSkinCancer(line1vals[0])
@@ -79,7 +79,7 @@ class SkinCancerDAO {
           if (lines == null) {
               return result
           }
-          val rows: ArrayList<String> = Ocl.parseCSVtable(lines)
+          val rows: List<String> = Ocl.parseCSVtable(lines)
           for (item in rows.indices) {
               val row = rows[item]
               if (row == null || row.trim { it <= ' ' }.isEmpty()) {
